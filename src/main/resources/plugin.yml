@@ -1,0 +1,4 @@
+name: BashCMDS
+version: '${project.version}'
+main: vulzed.bashcmds.BashCMDS
+load: STARTUP
