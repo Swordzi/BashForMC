@@ -10,7 +10,7 @@ public final class BashCMDS extends JavaPlugin {
     @Override
     public void onEnable() {
         // This will throw a NullPointerException if you don't have the command defined in your plugin.yml file!
-        this.getCommand("basic").setExecutor(new MyPluginCommandExecutor(this));
+        this.getCommand("BashCMDS").setExecutor(new MyPluginCommandExecutor(this));
     }
 
 
