@@ -14,11 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
         @Override
         public void onDisable() {
-            // TODO: Place any custom disable code here
 
-            // NOTE: All registered events are automatically unregistered when a plugin is disabled
-
-            // EXAMPLE: Custom code, here we just output some info so we can check all is well
             getLogger().info("Goodbye world!");
         }
 
@@ -41,11 +37,7 @@ import org.bukkit.plugin.java.JavaPlugin;
         }
 
         public boolean isDebugging(final Player player) {
-            if (debugees.containsKey(player)) {
-                return debugees.get(player);
-            } else {
-                return false;
-            }
+            return debugees.getOrDefault(player, false);
         }
 
         public void setDebugging(final Player player, final boolean value) {
